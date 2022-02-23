@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     echo "Selamat Datang";
 });
@@ -22,3 +23,8 @@ Route::get('/about', function () {
 Route::get('/articles/{id}', function ($id) {
     echo "Halaman Artikel dengan ID ".$id;
 });
+*/
+
+Route::get('/index', [HomeController::class, 'index']);
+Route::get('/about', [AboutController::class, 'about']);
+Route::get('/articles', [ArticleController::class, 'articles']);
